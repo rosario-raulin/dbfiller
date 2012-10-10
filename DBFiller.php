@@ -24,8 +24,7 @@
 
 				for ($i = 0; ($mail = fgets($fd)) != NULL; ++$i) {
 
-					if (($lname = fgets($fd)) == NULL ||
-							($fname = fgets($fd)) == NULL) {
+					if (($lname = fgets($fd)) == NULL || ($fname = fgets($fd)) == NULL) {
 						throw new Exception("input file format error");
 					}
 
