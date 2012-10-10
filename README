@@ -1,0 +1,18 @@
+This script simply adds users to a database table "users" by reading the email
+address, last and first name from a file called "entries.txt".
+
+entries.txt has the form:
+
+[...]
+email 1
+last name 1
+first name 1
+email 2
+lastname 2
+first name 2
+[...]
+
+See index.php for an example.
+
+Use config.php to add all the information needed to connect to the database.
+
