@@ -7,16 +7,16 @@
 	<body>
 		<p>
 		<?php
-			error_reporting(E_ALL);
-			ini_set('display_errors', '1');
-
 			require "DBFiller.php";
 
 			try {
-				if ($added == 0) {
+				$filler = new DBFiller();
+				$leftout = $filler->fill("entries.txt");
+
+				if ($leftout == 0) {
 					echo "Added all entries.";
 				} else {
-					echo $added . " entries left out.";
+					echo $leftout . " entries left out.";
 				}
 			} catch (Exception $e) {
 				die($e);
